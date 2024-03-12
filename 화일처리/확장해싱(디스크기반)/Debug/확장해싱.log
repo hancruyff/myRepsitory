@@ -1,0 +1,9 @@
+﻿  확장해싱.cpp
+c:\users\user\documents\1.강의자료\2.화일실습\c알고리즘예제\확장해싱(디스크기반) - 복사본\확장해싱.cpp(31): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+c:\users\user\documents\1.강의자료\2.화일실습\c알고리즘예제\확장해싱(디스크기반) - 복사본\확장해싱.cpp(9): warning C4101: 'init' :참조되지 않은 지역 변수입니다.
+c:\users\user\documents\1.강의자료\2.화일실습\c알고리즘예제\확장해싱(디스크기반) - 복사본\확장해싱.cpp(165): warning C4101: 'String_Key' :참조되지 않은 지역 변수입니다.
+c:\users\user\documents\1.강의자료\2.화일실습\c알고리즘예제\확장해싱(디스크기반) - 복사본\확장해싱.cpp(502): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+c:\users\user\documents\1.강의자료\2.화일실습\c알고리즘예제\확장해싱(디스크기반) - 복사본\확장해싱.cpp(580): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  c:\users\user\documents\1.강의자료\2.화일실습\c알고리즘예제\확장해싱(디스크기반) - 복사본\확장해싱.cpp(580): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 0개 필요하지만 2개가 제공되었습니다.
+c:\users\user\documents\1.강의자료\2.화일실습\c알고리즘예제\확장해싱(디스크기반) - 복사본\확장해싱.cpp(591): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  확장해싱.vcxproj -> C:\Users\user\Documents\1.강의자료\2.화일실습\C알고리즘예제\확장해싱(디스크기반) - 복사본\Debug\확장해싱.exe

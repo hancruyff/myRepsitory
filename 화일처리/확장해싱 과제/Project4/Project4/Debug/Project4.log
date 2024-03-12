@@ -1,0 +1,10 @@
+﻿  확장해싱.cpp
+c:\users\hanji\source\repos\project4\project4\확장해싱.cpp(32): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+c:\users\hanji\source\repos\project4\project4\확장해싱.cpp(10): warning C4101: 'init' :참조되지 않은 지역 변수입니다.
+c:\users\hanji\source\repos\project4\project4\확장해싱.cpp(176): warning C4101: 'String_Key' :참조되지 않은 지역 변수입니다.
+c:\users\hanji\source\repos\project4\project4\확장해싱.cpp(511): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+c:\users\hanji\source\repos\project4\project4\확장해싱.cpp(560): warning C4101: 'j' :참조되지 않은 지역 변수입니다.
+c:\users\hanji\source\repos\project4\project4\확장해싱.cpp(638): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  c:\users\hanji\source\repos\project4\project4\확장해싱.cpp(638): note: 자리 표시자 및 해당 매개 변수에는 variadic 인수가 0개 필요하지만 2개가 제공되었습니다.
+c:\users\hanji\source\repos\project4\project4\확장해싱.cpp(649): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  Project4.vcxproj -> C:\Users\hanji\source\repos\Project4\Debug\Project4.exe
