@@ -37,6 +37,11 @@
 
 ## 캘린더앱 
 일정을 기록하고 설정한 날짜와 시간이 되면 알림으로 사용자에게 기록한 일정을 알려줌
+1. 일정 추가
+2. 일정 편집
+3. 일정 삭제
+4. 알림 기능
+5. 지출 관리(가계부)
 ![Screenshot_20240329_170208](https://github.com/hancruyff/myRepsitory/assets/130347189/dc09ff1c-656e-4ec4-90d4-d28c0fd49c1f)
 
 ![Screenshot_20240329_171123](https://github.com/hancruyff/myRepsitory/assets/130347189/c167a8cb-9549-4920-b912-1c558fd11c56)
