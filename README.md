@@ -33,3 +33,16 @@
 기울어지는 방향으로 핸들을 돌려 자전거를 타는데 미숙한 사람들을 보조해주는 장치 개발
 어두운 곳에서 자동으로 라이트를 켜지게 설계
 사고 발생시 충격을 감지하여 등록된 번호로 사고가 발생했다는 문자메시지를 전송
+
+
+## 캘린더앱 
+일정을 기록하고 설정한 날짜와 시간이 되면 알림으로 사용자에게 기록한 일정을 알려줌
+![Screenshot_20240329_170208](https://github.com/hancruyff/myRepsitory/assets/130347189/dc09ff1c-656e-4ec4-90d4-d28c0fd49c1f)
+
+![Screenshot_20240329_171123](https://github.com/hancruyff/myRepsitory/assets/130347189/c167a8cb-9549-4920-b912-1c558fd11c56)
+
+![Screenshot_20240329_171107](https://github.com/hancruyff/myRepsitory/assets/130347189/1023acc1-2c18-4723-91d7-26469eb038ab)
+
+![Screenshot_20240329_171144](https://github.com/hancruyff/myRepsitory/assets/130347189/611e8300-906e-4ade-87ea-0365d118da11)
+
+![Screenshot_20240329_171252](https://github.com/hancruyff/myRepsitory/assets/130347189/b656c829-21b9-413d-badb-8385522d8166)
