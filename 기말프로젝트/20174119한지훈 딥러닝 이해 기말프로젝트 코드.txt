@@ -1,0 +1,160 @@
+!pip install kaggle --upgrade
+from google.colab import files
+files.upload()
+!mkdir -p ~/.kaggle
+!cp kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+!kaggle datasets download -d kshitij192/cars-image-dataset
+!unzip cars-image-dataset.zip
+import os
+import numpy as np
+from PIL import Image
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.callbacks import LearningRateScheduler
+import matplotlib.pyplot as plt
+
+# 데이터 경로 설정
+train_data_dir = '/content/Cars Dataset/train'
+test_data_dir = '/content/Cars Dataset/test'
+img_width, img_height = 150, 150
+batch_size = 32
+num_epochs = 200
+
+# 데이터 생성기 생성 및 전처리 설정
+train_datagen = ImageDataGenerator(
+    rescale=1./255,
+    rotation_range=20,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    shear_range=0.2,
+    zoom_range=0.2,
+    horizontal_flip=True
+)
+test_datagen = ImageDataGenerator(rescale=1. / 255)
+
+# 훈련 데이터 로딩 및 전처리
+train_generator = train_datagen.flow_from_directory(
+    train_data_dir,
+    target_size=(img_height, img_width),
+    batch_size=batch_size,
+    class_mode='categorical'
+)
+
+# 테스트 데이터 로딩 및 전처리
+test_generator = test_datagen.flow_from_directory(
+    test_data_dir,
+    target_size=(img_height, img_width),
+    batch_size=batch_size,
+    class_mode='categorical'
+)
+
+# 검증 데이터 로딩 및 전처리
+val_generator = test_datagen.flow_from_directory(
+    test_data_dir,
+    target_size=(img_height, img_width),
+    batch_size=batch_size,
+    class_mode='categorical',
+    shuffle=False
+)
+
+# CNN 모델 정의
+model = Sequential()
+model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(img_height, img_width, 3)))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(64, (3, 3), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(128, (3, 3), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(Conv2D(256, (3, 3), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(Flatten())
+model.add(Dense(256, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(128, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(train_generator.num_classes, activation='softmax'))
+
+# 모델 컴파일
+optimizer = Adam(learning_rate=0.001)
+model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
+
+# 학습률 스케줄링을 위한 함수
+def lr_schedule(epoch):
+    lr = 0.001
+    if epoch > 100:
+        lr *= 0.1
+    elif epoch > 50:
+        lr *= 0.5
+    return lr
+
+# 모델 학습
+lr_scheduler = LearningRateScheduler(lr_schedule)
+history = model.fit(
+    train_generator,
+    epochs=num_epochs,
+    callbacks=[lr_scheduler],
+    validation_data=val_generator  # 검증 데이터 지정
+)
+
+# 모델 평가
+test_loss, test_accuracy = model.evaluate(test_generator)
+print('Test Loss:', test_loss)
+print('Test Accuracy:', test_accuracy)
+
+# 정확도 변화 그래프 출력
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('Model Accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Validation'], loc='upper left')
+plt.show()
+
+# 랜덤으로 테스트 이미지 선택 및 예측
+random_index = np.random.randint(len(test_generator.filenames))
+random_image = test_generator.filenames[random_index]
+random_image_path = os.path.join(test_data_dir, random_image)
+random_label = test_generator.classes[random_index]
+class_labels = list(test_generator.class_indices.keys())
+
+image = Image.open(random_image_path).resize((img_height, img_width))
+image.show()
+print('Random Test Image:', random_image)
+image_array = np.array(image)
+print('Predicted Brand:', class_labels[np.argmax(model.predict(np.expand_dims(image_array, axis=0)))])
+model.save('car.h5')
+import os
+import numpy as np
+from PIL import Image
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.models import load_model
+
+# 이미지 경로 및 모델 파일 경로
+#image_path = '/content/audi.jpg'
+#image_path = '/content/Rolls Royce.jpg'
+#image_path = '/content/hyundai creta.jpg'
+#image_path = '/content/mahindra scorpio.jpg'
+#image_path = '/content/swift.jpg'
+#image_path = '/content/tata safari.jpg'
+image_path = '/content/toyota innova.jpg'
+model_path = '/content/car.h5'
+
+# 이미지 전처리
+image = load_img(image_path, target_size=(img_height, img_width))
+image_array = img_to_array(image) / 255.0
+image_array = np.expand_dims(image_array, axis=0)
+
+# 모델 로드
+model = load_model(model_path)
+
+# 이미지 예측
+prediction = model.predict(image_array)
+
+# 예측 결과 출력
+predicted_class_index = np.argmax(prediction)
+predicted_class_label = class_labels[predicted_class_index]
+image.show()
+print('Predicted Class:', predicted_class_label)
