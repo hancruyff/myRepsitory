@@ -6,8 +6,8 @@ from sdk.exceptions import CoolsmsException
 if __name__ == "__main__":
 
     # set api key, api secret
-    api_key = "NCSAYSLBEJOJNAWP"
-    api_secret = "G9O5C4RF0KRP5DGYABD1H0RVV5UD8OVT"
+    api_key = "-------------"
+    api_secret = "------------------------"
 
     ## 4 params(to, from, type, text) are mandatory. must be filled
     params = dict()
