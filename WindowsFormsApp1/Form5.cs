@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
         {
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
             }
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -346,7 +346,7 @@ namespace WindowsFormsApp1
             int DN=0;
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
