@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
             dataGridView1.Rows.Clear();
             button_trainadd.Enabled = false;
             button_TTadd.Enabled = false;
-            string connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            string connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             OleDbConnection conn;
             conn = new OleDbConnection(connectionString);
             conn.Open(); //데이터베이스 연결
@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             dataGridView1.Rows.Clear();
             conn = new OleDbConnection(connectionString);
             try
@@ -120,7 +120,7 @@ namespace WindowsFormsApp1
             button_TTadd.Enabled = false;
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             dataGridView1.Rows.Clear();
             label3.Text = "열차번호";
             label4.Text = "열차등급";
@@ -172,7 +172,7 @@ namespace WindowsFormsApp1
             
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -253,7 +253,7 @@ namespace WindowsFormsApp1
             approve.Enabled = false;
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             dataGridView1.Rows.Clear();
             label3.Text = "역순번";
@@ -306,7 +306,7 @@ namespace WindowsFormsApp1
             dataGridView1.Rows.Clear();
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -356,7 +356,7 @@ namespace WindowsFormsApp1
         {
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -393,7 +393,7 @@ namespace WindowsFormsApp1
             button2.Enabled = true;
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -433,7 +433,7 @@ namespace WindowsFormsApp1
         {
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
