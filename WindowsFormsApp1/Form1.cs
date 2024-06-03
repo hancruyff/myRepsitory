@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         OleDbConnection conn;
-        string connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+        string connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
         private void button_login_Click(object sender, EventArgs e)
         {
             conn = new OleDbConnection(connectionString);
