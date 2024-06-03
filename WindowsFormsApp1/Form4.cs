@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             dataGridView1.Rows.Clear();
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
             dataGridView1.Rows.Clear();
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -122,7 +122,7 @@ namespace WindowsFormsApp1
 
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -176,7 +176,7 @@ namespace WindowsFormsApp1
             pw = sb.ToString();
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -233,7 +233,7 @@ namespace WindowsFormsApp1
             dataGridView1.Rows.Clear();
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han11111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -285,7 +285,7 @@ namespace WindowsFormsApp1
             dataGridView1.Rows.Clear();
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -344,7 +344,7 @@ namespace WindowsFormsApp1
         {
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -404,7 +404,7 @@ namespace WindowsFormsApp1
         {
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -437,7 +437,7 @@ namespace WindowsFormsApp1
             dataGridView1.Rows.Clear();
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
@@ -495,7 +495,7 @@ namespace WindowsFormsApp1
             dataGridView1.Rows.Clear();
             OleDbConnection conn;
             string connectionString;
-            connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119";
+            connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119";
             conn = new OleDbConnection(connectionString);
             try
             {
