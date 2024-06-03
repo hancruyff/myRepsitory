@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         }
         bool idcheck = false;
         OleDbConnection conn;
-        string connectionString = "Provider=MSDAORA;Password=han1120;User ID=hjh4119"; //oracle 서버 연결
+        string connectionString = "Provider=MSDAORA;Password=han1111;User ID=hjh4119"; //oracle 서버 연결
         int usernum;
 
         private void button_sign_Click(object sender, EventArgs e)
